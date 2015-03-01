@@ -1,0 +1,54 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    int maxProfit(int k, vector<int> &prices) {
+        vector<int> b,s;
+        int i = 0,j = 0,n;
+
+        while(prices[0] == prices[i] && i<prices.size()) i++;
+        if(i>=prices.size()) return 0;
+
+        if(prices[0]<prices[i]) b.push_back(prices[0]);
+
+        for(;i<prices.size()-1;i++){
+            j = i;
+            while(prices[i] == prices[j] && j<prices.size()) j++;
+            if(j>=prices.size()) break;
+            if(prices[i]<prices[i-1] && prices[i]<prices[j]) b.push_back(prices[i]);
+            if(prices[i]>prices[i-1] && prices[i]>prices[j]) s.push_back(prices[i]);
+        }
+        if(prices[i]>prices[i-1]) s.push_back(prices[i]);
+        n = b.size();
+        int p[n][k];
+        for(i=0;i<n;i++)
+            for(j=0;i<k;j++)
+                p[i][j] = 0;
+
+        
+
+
+
+
+
+
+ /*       for(int j=0;j<b.size();j++)
+            cout<<b[j]<<' ';
+        cout<<endl;
+        for(int j=0;j<s.size();j++)
+            cout<<s[j]<<' ';
+        cout<<endl;*/
+    }
+};
+
+int main()
+{
+    int t[] = {1,1,1,1};
+    vector<int> p(t,t+4);
+    Solution myS;
+    myS.maxProfit(10,p);
+    cout << "Hello world!!" << endl;
+    return 0;
+}
