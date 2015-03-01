@@ -1,0 +1,31 @@
+class Solution {
+public:
+    map<int,double> t;
+    double pow(double x, int n){
+        if(n<0){
+            double result = _pow(x,-n);
+            if(result != 0)
+                return 1/result;
+            return result;
+        }
+        return _pow(x,n);
+    }
+
+    double _pow(double x, int n) {
+        if(t.find(n) != t.end())
+            return t[n];
+
+        if(x == 0)
+            return 0;
+
+        if(n == 0)
+            return 1;
+
+        if(n == 1)
+            return x;
+
+        double result = _pow(x,n/2)*_pow(x,n/2)*(n%2 == 1?x:1);
+        t.insert(pair<int,double>(n,result));
+        return result;
+    }
+};
