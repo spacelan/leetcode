@@ -1,4 +1,2 @@
 # leetcode
-
---
-record
+To record my code, comments and experience
