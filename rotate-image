@@ -1,3 +1,7 @@
+/** \link https://oj.leetcode.com/problems/rotate-image/
+ * \comments 用了in-place algorithm，没有增加额外空间，但是处理速度有下降。这个题没有涉及高级算法，但是需要逻辑清晰，并熟悉线性代数相关知识。与计算机图形学相关。
+ *
+ */   
 class Solution {
 public:
     void rotate(vector<vector<int> > &matrix) {
