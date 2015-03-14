@@ -21,7 +21,6 @@ public:
 class Solution {
 public:
     int jump(int A[], int n) {
-        if(A[0] == 25000 && n == 25002) return 2;
         int jump_count[n];
         int index = n - 1;
         int i;
