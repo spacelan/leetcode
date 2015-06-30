@@ -1,3 +1,7 @@
+/** \link
+ * \comments 建堆时间复杂度O(n)，之后每次点整时间复杂度O(logn)
+ */
+ 
 #include <iostream>
 #include <vector>
 #include <stack>
