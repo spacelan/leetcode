@@ -1,3 +1,7 @@
+/** \link
+ * \comments 熟悉一下归并排序和快速排序
+ */
+
 #include <iostream>
 #include <vector>
 #include <stack>
