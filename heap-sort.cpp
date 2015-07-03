@@ -1,5 +1,5 @@
 /** \link
- * \comments 建堆时间复杂度O(n)，之后每次点整时间复杂度O(logn)
+ * \comments 建堆时间复杂度O(n)，之后每次点整时间复杂度O(logn)。堆排序通常比快速排序稍微慢，但是最坏情况的运行时间总是O(n log n)
  */
  
 #include <iostream>
